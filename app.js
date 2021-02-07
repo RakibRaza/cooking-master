@@ -34,12 +34,12 @@ const getMealById = async (id) => {
 // Handle Click Event
 document.getElementById("search-btn").addEventListener("click", (e) => {
   e.preventDefault();
-  showPreloader();
 
   const searchInput = document.getElementById("search-meal");
   const keyword = searchInput.value;
 
   if (keyword) {
+    showPreloader();
     getMeals(keyword);
   }
 
